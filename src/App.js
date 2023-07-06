@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Header from './Components/Header';
+import Post from './Components/Post';
+import Click from './Components/Click';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+     <Header />
+     </div>
+   <div style={{display:"flex", justifyContent:"center"}}>
+     {/* Posts &  Click container */}
+         <div style={{display: "flex"}}>
+     {/* Post Container */}
+         <div style={{width: "70%"}}> 
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post /> 
+            <Post />
+         </div>
+      {/*== Post container ==*/}
+      {/* Click container */}
+         <div style={{width: "30%"}}>
+        <Click />
+         </div>
+         {/*  */}
+     </div>
+ {/*== Post & Click container ==*/}
+    </div>
     </div>
   );
 }
